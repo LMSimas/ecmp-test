@@ -16,7 +16,7 @@ module circuit_tb;
       $dumpvars();
       en=0;
       for (i=0; i<100; i=i+1) begin
-         @(posedge clk) #1 x=i; en=1;
+         @(posedge clk) #1 x=$random%20; en=1;
          @(posedge clk) #1 en=0;
       end
 
